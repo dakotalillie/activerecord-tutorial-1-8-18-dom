@@ -3,7 +3,7 @@ import { ActionCable } from 'react-actioncable-provider';
 import { API_ROOT } from '../constants';
 import NewConversationForm from './NewConversationForm';
 import MessagesArea from './MessagesArea';
-import Cables from './Cables';
+import Cable from './Cable';
 
 class ConversationsList extends React.Component {
   state = {
@@ -47,7 +47,7 @@ class ConversationsList extends React.Component {
           onReceived={this.handleReceivedConversation}
         />
         {this.state.conversations.length ? (
-          <Cables
+          <Cable
             conversations={conversations}
             handleReceivedMessage={this.handleReceivedMessage}
           />
